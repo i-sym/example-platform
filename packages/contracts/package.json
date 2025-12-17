@@ -1,0 +1,30 @@
+{
+  "name": "@repo/contracts",
+  "description": "Shared contracts for the repository",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup --clean",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@repo/schemas": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20.19.27",
+    "jest": "^29.7.0",
+    "typescript": "5.5.4"
+  },
+  "dependencies": {
+    "@orpc/contract": "^1.12.3",
+    "tsup": "^8.5.1",
+    "zod": "^3.25.76"
+  }
+}
